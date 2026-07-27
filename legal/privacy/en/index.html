@@ -1,0 +1,213 @@
+<!doctype html>
+<!--
+  fuai Privacy Policy (en)
+  English counterpart of ../ja/. The Japanese version is the authoritative text;
+  keep both in sync when revising.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index,follow" />
+    <title>fuai Privacy Policy</title>
+    <link rel="stylesheet" href="../../shared/style.css" />
+  </head>
+  <body>
+    <main class="legal">
+      <header class="head">
+        <div>
+          <h1>fuai Privacy Policy</h1>
+          <div class="sub">Last updated: 2026-07-27 ・ Effective date: 2026-07-27</div>
+        </div>
+        <nav class="lang">
+          <a href="../ja/">ja</a>|
+          <a href="../en/" class="active">en</a>
+        </nav>
+      </header>
+
+      <p>
+        This Privacy Policy (the "Policy") describes how information about users (each a "User")
+        is handled in fuai (the "App"). The App is developed and operated by an individual
+        (the "Operator").
+      </p>
+      <p>
+        The App suggests brands that resonate with the aesthetic a User expresses in words and
+        images. By its nature, the scenes a User writes and the images a User selects are sent to
+        the Operator's server to generate suggestions. See §1.2 for details.
+      </p>
+
+      <h2>1. Information We Handle</h2>
+      <p>The Operator handles the following information to the extent necessary to provide the App.</p>
+      <h3>1.1 Information stored on your device</h3>
+      <ul>
+        <li>
+          The list of brands the User has saved (archived) and the brands the User has marked as
+          "not for me" so they are excluded from future suggestions.
+        </li>
+        <li>
+          The taste profile the App learns from the User's input (data describing the User's
+          preferences), and the history of past suggestions (suggested brand cards).
+        </li>
+        <li>Scene texts entered during onboarding, and in-app settings.</li>
+      </ul>
+      <p>
+        This data is stored only on the User's device (in a SQLite database and the OS secure
+        storage) and is not stored on the Operator's server.
+      </p>
+      <h3>1.2 Information sent to the server to generate suggestions</h3>
+      <p>
+        When the User requests brand suggestions, the following information is sent over the
+        Internet to the server operated by the Operator (stateless endpoints on Cloudflare
+        Workers).
+      </p>
+      <ul>
+        <li>
+          <strong>Scene input</strong>: the scene text the User entered, and the images the User
+          optionally selected from the photo library (converted and downscaled to JPEG on the
+          device, up to 3 images). The photo library is accessed only when the User performs this
+          action, and only the images the User selects are handled.
+        </li>
+        <li>
+          <strong>Information used to refine suggestions</strong>: identifiers of saved and
+          excluded brands, learned taste traits, and scene texts entered during onboarding.
+        </li>
+        <li>
+          <strong>Taste profile generation</strong>: when generating a profile summary from the
+          User's saved brands and taste traits, that information.
+        </li>
+      </ul>
+      <p>
+        The Operator's server forwards the received information to OpenAI's API (large language
+        models and embedding models), searches the brand database prepared by the Operator, and
+        returns the results to the User's device. The server does not persist the received
+        content.
+      </p>
+      <p>
+        When displaying the official-site image (OGP image) of a suggested brand, the image is
+        fetched via the Operator's server. Such requests contain only the brand's URL and none of
+        the User's input.
+      </p>
+      <h3>1.3 Information we do not collect</h3>
+      <ul>
+        <li>Name, address, phone number, date of birth, gender, email address, or other registration data (the App has no account feature).</li>
+        <li>Advertising identifiers such as IDFA / Advertising ID (the App shows no ads).</li>
+        <li>Location, contacts, microphone, or camera access (the photo library is accessed only as described in §1.2).</li>
+        <li>Usage data via crash reporting or analytics tools (Firebase / Crashlytics / Google Analytics, etc.).</li>
+        <li>Credit card or other payment information (the App has no paid features; everything is free).</li>
+      </ul>
+
+      <h2>2. Purposes of Use</h2>
+      <ul>
+        <li>Information sent under §1.2 is used solely to generate the brand suggestions and taste profile presented to the User.</li>
+        <li>The Operator does not use the information for training or improving machine-learning models, advertising, providing profiles to third parties, or any other secondary purpose.</li>
+      </ul>
+
+      <h2>3. Third Parties and Cross-Border Transfers</h2>
+      <h3>3.1 Third-party processors</h3>
+      <p>
+        To generate suggestions, the Operator forwards information sent by the User to the
+        following processors. They act on the Operator's behalf and are not independent
+        recipients.
+      </p>
+      <ul>
+        <li>
+          <strong>OpenAI, L.L.C.</strong> (United States)
+          <ul>
+            <li>Purpose: generating brand suggestions and taste profiles, and computing embeddings (vectors) that capture the meaning of scenes.</li>
+            <li>
+              The Operator relies on OpenAI's terms under which data submitted via the API is not
+              used to train OpenAI's models (the default behavior under the OpenAI Business Terms
+              / API Data Usage Policies).
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Cloudflare, Inc.</strong> (United States)
+          <ul>
+            <li>Purpose: the execution platform for the Operator's server (Cloudflare Workers), the brand database, and vector search.</li>
+            <li>Cloudflare does not persist the User's input.</li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        The Operator does not sell, transfer, or share the User's information with any other
+        third party (advertisers, data brokers, or other companies).
+      </p>
+      <h3>3.2 Transfers to foreign countries</h3>
+      <p>
+        The processors above are located in the United States. OpenAI and Cloudflare each take
+        measures necessary to protect personal information under their own privacy policies.
+        Please refer to their privacy policies for details.
+      </p>
+
+      <h2>4. Storage Location and Retention</h2>
+      <h3>4.1 On-device data</h3>
+      <ul>
+        <li>Saved brands, the taste profile, and suggestion history are stored only on the User's device.</li>
+        <li>Saved brands can be deleted individually in the App at any time. Uninstalling the App erases all on-device data.</li>
+        <li>The Operator does not unilaterally impose a retention period.</li>
+      </ul>
+      <h3>4.2 Server side</h3>
+      <ul>
+        <li>The Operator's server does not persist the User's input (it is discarded immediately after processing).</li>
+        <li>To prevent abuse, per-token rate-limit counters are kept briefly (on the order of hours) in a Cloudflare Durable Object; they contain none of the User's input.</li>
+        <li>Brands' official-site images (OGP images) are cached on the server for a limited time; they are the brands' content and contain no User information.</li>
+      </ul>
+
+      <h2>5. Security Measures</h2>
+      <ul>
+        <li><strong>Encryption in transit</strong>: all communication between the device and the Operator's server, and between the Operator and OpenAI, is encrypted with HTTPS (TLS).</li>
+        <li>
+          <strong>Protection of on-device data</strong>: saved brands and the taste profile are
+          stored in a SQLite database on the device. Their protection relies on the disk
+          encryption provided by the device OS (File Protection on iOS / File-Based Encryption on
+          Android). Additional app-level encryption (e.g., SQLCipher) is not currently
+          implemented. We strongly recommend enabling a lock-screen passcode / biometrics and
+          keeping the OS up to date.
+        </li>
+        <li><strong>Access control</strong>: the Operator's server requires an auth token and rejects unauthenticated requests (returns 401).</li>
+        <li><strong>Server-side data minimization</strong>: by not persisting data, the design minimizes the risk of a server-side data breach.</li>
+      </ul>
+
+      <h2>6. Your Rights</h2>
+      <p>Users have the following rights.</p>
+      <ul>
+        <li><strong>Access</strong>: the archive and profile screens in the App show the data stored on the device.</li>
+        <li><strong>Deletion</strong>: saved brands can be deleted individually in the App at any time. Uninstalling the App erases all on-device data. Because the server holds no data in the first place, no deletion request to the server is necessary.</li>
+        <li><strong>Rectification</strong>: the taste profile is updated through the User's own actions — saving or deleting brands and marking suggestions as "not for me."</li>
+        <li><strong>Objections and complaints</strong>: complaints about this Policy or the handling of personal information can be sent to the contact in §8.</li>
+        <li><strong>Supervisory authority</strong>: Users in Japan may lodge a complaint with the Personal Information Protection Commission; Users in the EU may lodge one with their local data protection authority.</li>
+      </ul>
+      <p>
+        <strong>Do-not-sell declaration (CCPA)</strong>: the Operator does not sell the personal
+        information of any User, including California residents.
+      </p>
+
+      <h2>7. Revisions</h2>
+      <ul>
+        <li>The Operator may revise this Policy in response to legal changes, service improvements, and the like.</li>
+        <li>Revisions are recorded with their date and content in the "Revision history" section of this page.</li>
+        <li>
+          For material changes (additional data collected, additional purposes, additional
+          processors, weakened security measures, etc.), separate notice may be given in the App
+          or on the store listing.
+        </li>
+      </ul>
+
+      <h2>8. Contact</h2>
+      <p>For inquiries about this Policy or the App's handling of personal information, please contact:</p>
+      <ul>
+        <li>Operator: mon50 (individual)</li>
+        <li>Email: <code>&lt;&lt;CONTACT_EMAIL&gt;&gt;</code></li>
+      </ul>
+
+      <footer class="revisions">
+        <strong>Revision history</strong>
+        <ul>
+          <li>2026-07-27: First edition published</li>
+        </ul>
+      </footer>
+      <footer class="bottom">© fuai / mon50</footer>
+    </main>
+  </body>
+</html>
